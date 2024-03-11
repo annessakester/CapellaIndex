@@ -143,6 +143,7 @@ div.desc {
     padding: 15px;
     text-align: center;
 }
+    
 </style>
 <head>
     <title>Invitation Page</title>
@@ -159,6 +160,7 @@ div.desc {
                 </li>
                 <li><a href="invitation.html">Invitation</a>
                 </li>
+                <li><a href="volunteer.html">Volunteers</a></li> 
                 <li><a href="gallery.html"  class="active">Gallery</a>
                 </li>
                 <li><a href="registration.html">Registration</a>
@@ -169,47 +171,58 @@ div.desc {
     </header>
 <section id="gallery">
     <div class="gallery">
-    <a target="_blank" href="images/firefighter.jpg">
-        <img onmouseover="bigImg(this)" onmouseout="normalImg(this)">
-        <img src="images/firefighter.jpg" alt="firefighter" width="300" height="200">
-    </a>
-    <div class="desc">Firefighter after work</div>
+        <img id="firefighter" src=".\images\firefighter.png" width="300" height="200" alt="hover" />
+        <div class="desc">Firefighter after work</div>
     </div>
 
 <div class="gallery">
-  <a target="_blank" href="images/work.jpg">
-    <img onmouseover="bigImg(this)" onmouseout="normalImg(this)">
-    <img src="images/work.jpg" alt="work" width="300" height="200">
-  </a>
-  <div class="desc">Birthday planning</div>
+    <img id="work" src=".\images\work.png" width="300" height="200" alt="hover" />
+    <div class="desc">Birthday Planning</div>
 </div>
 
 <div class="gallery">
-  <a target="_blank" href="images/silhouette.jpg">
-    <img onmouseover="bigImg(this)" onmouseout="normalImg(this)">
-    <img src="images/silhouette.jpg" alt="silhouette" width="300" height="200">
-  </a>
-  <div class="desc">Sunset silhouettes</div>
+    <img id="silhouette" src=".\images\silhouette.png" width="300" height="200" alt="hover" />
+    <div class="desc">Silhouettes</div>
 </div>
 
 <div class="gallery">
-  <a target="_blank" href="images/event.jpg">
-    <img onmouseover="bigImg(this)" onmouseout="normalImg(this)">
-    <img src="images/event.jpg" alt="event" width="300" height="200">
-  </a>
+    <img id="dance" src=".\images\dance.png" width="300" height="200" alt="hover" />
   <div class="desc">Wedding dance</div>
 </div>
 </section>
 
 <script>
-    function bigImg(x) {
-        x.style.height = "600px";
-        x.style.width = "800px";
+ document.getElementById("firefighter").addEventListener("mouseover", bigImg);
+ document.getElementById("firefighter").addEventListener("mouseout", normalImg);
+ document.getElementById("work").addEventListener("mouseover", bigImg);
+ document.getElementById("work").addEventListener("mouseout", normalImg);
+ document.getElementById("silhouette").addEventListener("mouseover", bigImg);
+ document.getElementById("silhouette").addEventListener("mouseout", normalImg);
+ document.getElementById("dance").addEventListener("mouseover", bigImg);
+ document.getElementById("dance").addEventListener("mouseout", normalImg);
+    
+    function bigImg() {
+        firefighter.style.height="200px";
+        firefighter.style.width="200px";
+        work.style.height="200px";
+        work.style.width="200px";
+        silhouette.style.height="200x";
+        silhouette.style.width="200px";
+        dance.style.height="200px";
+        dance.style.width="200px";
     }
-    function normalImg(x) {
-        x.style.height = "100px";
-        x.style.width = "180px";
+    function normalImg() {
+       firefighter.style.height= "100px";
+       firefighter.style.width= "100px";
+       work.style.height= "100px";
+       work.style.width= "100px";
+       silhouette.style.height= "100px";
+       silhouette.style.width= "100px";
+       dance.style.height= "100px";
+       dance.style.width= "100px";
+       
     }
+window.onload = normalImg;
 </script>
 
     <footer>This events site is for IT-FP3215 tasks.
@@ -217,3 +230,4 @@ div.desc {
 </body>
 
 </html>
+

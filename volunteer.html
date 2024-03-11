@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <style>
-body {
+    body {
     font: 15px arial, sans-serif;
     color: #808080;
 }
@@ -121,7 +121,7 @@ footer {
     left: 0;
     padding: 1rem;
     background-color: #efefef;
-    text-align: center
+    text-align: center;
 }
 div.gallery {
     margin: 5px;
@@ -143,10 +143,10 @@ div.desc {
     padding: 15px;
     text-align: center;
 }
-</style>
-
+</style>     
 <head>
     <title>Invitation Page</title>
+	<script type="text/javascript" src="js/volunteers.js"></script>
 </head>
 
 <body>
@@ -156,48 +156,48 @@ div.desc {
         </div>
         <nav>
             <ul class="topnav">
-                <li><a href="index.html" class="active">Home</a>
+                <li><a href="index.html">Home</a>
                 </li>
-                <li><a href="invitation.html">Invitation</a>
+                <li><a href="invitation.html" >Invitation</a>
                 </li>
-                <li><a href="volunteer.html">Volunteers</a></li> 
+				<li><a href="volunteer.html" class="active">Volunteers</a>
+                </li>
                 <li><a href="gallery.html">Gallery</a>
                 </li>
                 <li><a href="registration.html">Registration</a>
                 </li>
             </ul>
-        </nav> 
-    </header>
-    <section id="bannerImages">
-	Banner Images<br/>        
-    </section>
- <script>
-    var i = 0;
-    var images = [];
-    var time = 3000;
-     
-    images[0] = 'images/volunteer.png';
-    images[1] = 'images/coffee.png';
-    images[2] = 'images/join.png';
-     
-function changeImg() {
-    document.slide.src = images[i];
-    
-    if(i < images.length - 1) {
-       i++
-       } else {
-           i = 0;
-       }
-    
-    setTimeout("changeImg()", time);
-}
 
-window.onload = changeImg;
-</script>  
-    
-<img name="slide" width="400" height="200">
-    
-    <footer>This events site is for IT-FP3215 tasks.
+        </nav>
+    </header>
+    <section id="pageForm">
+        <form action="#">
+
+			<h1>Volunteers</h1>
+			<div>
+				<label for="first_name">First Name:</label>
+				<input type="text" id="first_name">
+				
+				<label for="last_name">Last Name:</label>
+				<input type="text" id="last_name">
+			   
+
+				
+				<input type="button" id="add_button" value="Add Volunteer">
+				<input type="button" id="delete_button" value="Delete Volunteer">
+			</div>
+			<h2>Volunteer List</h2>
+			<textarea id="volunteerList" rows="10" cols="60"></textarea>
+			<div>
+
+				<input type="button" id="clear_button" value="Clear Volunteers">
+
+				<input type="button" id="sort_button" value="Sort By First Name">
+			</div>
+
+		</form>
+	</section>
+    <footer>This events site is for IT3515 tasks.
     </footer>
 </body>
 
